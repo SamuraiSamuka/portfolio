@@ -1,0 +1,27 @@
+.project {
+  // h-[52vh] max-w-96 translate-x-4 overflow-hidden rounded-3xl border
+  border-radius: 1.7rem;
+  width: 24.5rem;
+  height: 27rem;
+  translate: 12px;
+  overflow: hidden;
+  
+  a:hover {
+    color: rgb(101, 186, 255)
+  }
+}
+
+.project-info {
+  //z-[2]  flex flex-col justify-between  p-4
+  
+  translate: 0 0;
+  transition: translate .5s;
+  padding: .5rem 1rem;
+}
+
+.project:hover {
+  
+  .project-info {
+    translate: 0 -80px;
+  }
+}
