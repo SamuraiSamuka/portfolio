@@ -4,7 +4,7 @@ import Section from "../Section";
 
 export default function HomeSection() {
   return (
-    <Section first={true} id="inicio">
+    <Section id="inicio">
       <div className=" flex h-full items-center justify-center">
         <div className="relative flex w-full flex-col items-start justify-start gap-4 pt-4 md:h-[24rem] lg:h-[32rem]">
           <h1 className=" text-right md:text-[5.7rem] lg:text-9xl">Full</h1>

@@ -4,7 +4,10 @@ import "./globals.css";
 import Header from "./components/Header";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
-const outfit = Outfit({ subsets: ["latin"], weight: ["500", "400"] });
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["500", "400", "600", "700", "300"],
+});
 
 export const metadata: Metadata = {
   title: "Samuel Carvalho",

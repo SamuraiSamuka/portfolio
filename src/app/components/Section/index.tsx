@@ -1,22 +1,25 @@
 import { ReactElement } from "react";
 import NextSection from "../NextSection";
 
-interface SectionProps {
+interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   id: string;
   title?: string;
   children?: ReactElement | ReactElement[];
   first?: boolean;
 }
 
-export default function Section({ title, id, children, first = false }: SectionProps) {
+export default function Section({ first = false, ...props }: SectionProps) {
   return first ? (
-    <section className={`h-[80vh] snap-center scroll-mt-[10vh] px-6`} id={id}>
-      {children}
+    <section
+      {...props}
+      className={`h-[80vh] snap-center scroll-mt-[10vh] overflow-hidden px-6 ${props.className} `}
+    >
+      {props.children}
     </section>
   ) : (
-    <section className=" h-[90vh] snap-center px-6" id={id}>
-      <NextSection href={`#${id}`} title={title || ""} />
-      <div className=" max-h-[90vh]">{children}</div>
+    <section className="h-[90vh] snap-center overflow-hidden px-6" {...props}>
+      <NextSection href={`#${props.id}`} title={props.title || ""} />
+      <div className=" h-[90vh] max-h-[90vh]">{props.children}</div>
     </section>
   );
 }
