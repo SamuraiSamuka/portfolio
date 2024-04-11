@@ -31,7 +31,7 @@ export default function ProjectItem({
 
   return (
     <div
-      className={`${styles.project} h-fit max-h-[64vh] min-h-96 w-[24.5rem] overflow-hidden rounded-3xl`}
+      className={`${styles.project} mx-2 h-fit max-h-[64vh] min-h-96 max-w-[70vw] overflow-hidden rounded-3xl sm:w-[24.5rem]`}
     >
       <img src={imageUrl} alt="" className="h-[60%] w-full rounded-t-3xl object-cover" />
       <div

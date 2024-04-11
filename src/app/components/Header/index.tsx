@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import { FiAlignCenter } from "react-icons/fi";
-import { ReactEventHandler } from "react";
 import "./styles.css";
 
 const DynamicButton = dynamic(() => import("@/app/components/Button"), {
@@ -21,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className={`cabecalho fixed z-[5] mx-auto ml-[-2rem] box-border grid w-full grid-cols-3 items-center justify-between bg-cinza-900 px-8 py-4 sm:flex md:max-w-screen-md lg:max-w-screen-lg`}
+      className={`cabecalho fixed z-[5] mx-auto ml-[-1rem] box-border grid w-full grid-cols-3 items-center justify-between bg-cinza-900 px-4 py-4 sm:ml-[-2rem] sm:flex sm:px-8 md:max-w-screen-md lg:max-w-screen-lg`}
       id="cabecalho"
     >
       <div className=" text-lg leading-tight">

@@ -17,7 +17,7 @@ export default function Section({ first = false, ...props }: SectionProps) {
       {props.children}
     </section>
   ) : (
-    <section className="h-[90vh] snap-center overflow-hidden px-6" {...props}>
+    <section className="h-[90svh] snap-center overflow-hidden px-6" {...props}>
       <NextSection href={`#${props.id}`} title={props.title || ""} />
       <div className=" h-[90vh] max-h-[90vh]">{props.children}</div>
     </section>

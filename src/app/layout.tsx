@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${outfit.className} relative mx-auto h-full px-8 md:max-w-screen-md lg:max-w-screen-lg`}
+        className={`${poppins.className} ${outfit.className} relative mx-auto h-full px-4 sm:px-8 md:max-w-screen-md lg:max-w-screen-lg`}
       >
         <Header />
         {children}

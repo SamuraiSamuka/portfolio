@@ -18,13 +18,13 @@ import Button from "../Button";
 export default function HabilitiesSection() {
   return (
     <Section id="habilidades" title="Minhas Skills">
-      <div className="grid grid-cols-2 gap-24">
+      <div className="grid-cols-2 gap-24 sm:grid">
         <img
           src="foto.jpg"
           alt=""
-          className="rounded-2xl sm:max-h-[60%] lg:max-h-[52vh]"
+          className="hidden max-h-[30vh] rounded-2xl sm:block sm:max-h-[60%] lg:max-h-[52vh]"
         />
-        <div className="w-[]">
+        <div className="">
           <h3 className=" text-xl">Hard skills</h3>
           <div className=" mb-1 grid grid-cols-2 justify-start gap-y-6 py-6">
             <Hability icon={SiJavascript} title="Javascript" />

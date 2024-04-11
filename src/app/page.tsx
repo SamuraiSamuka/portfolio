@@ -1,8 +1,9 @@
 "use client";
+
 import HomeSection from "./components/HomeSection";
 import AboutMeSection from "./components/AboutMeSection";
 import HabilitiesSection from "./components/HabilitiesSection";
-import ProjectsSection from "./components/ProjectsSection";
+import ProjectsSection from "@/app/components/ProjectsSection";
 
 export default function Home() {
   return (
