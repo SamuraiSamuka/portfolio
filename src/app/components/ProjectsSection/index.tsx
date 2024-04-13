@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
-import { SiNextbilliondotai } from "react-icons/si";
 import {
   MdOutlineKeyboardDoubleArrowRight,
   MdOutlineKeyboardDoubleArrowLeft,
@@ -28,13 +27,13 @@ export default function ProjectsSection() {
   }, []);
 
   var settings = {
-    className: "h-[45.7vh]",
+    className: "h-[46vh] w-full block",
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     slidesToShow: 2,
-    autoplay: false,
+    autoplay: true,
     centerMode: true,
     autoplaySpeed: 3500,
     variableWidth: true,
@@ -68,8 +67,8 @@ export default function ProjectsSection() {
           id="projetos"
           className="h-[90svh] snap-center overflow-hidden sm:px-6"
         >
-          <h2 className="mt-6 h-[10vh] text-center text-3xl">Meus Projetos</h2>
-          <div className="grid-cols-[5%_90%_5%] sm:grid">
+          <h2 className="mt-[5svh] h-[8svh] text-left text-2xl">Meus Projetos</h2>
+          <div className="grid-cols-[4%_92%_4%] sm:grid">
             <button
               onClick={previous}
               className="hidden items-center justify-center bg-neutral-800 sm:flex"
