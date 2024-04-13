@@ -2,11 +2,6 @@
   display: none;
 }
 
-.active-menu_menu {
-  display: flex;
-  flex-direction: column;
-}
-
 .cabecalho {
   height: 10vh;
 }
@@ -17,7 +12,12 @@
   }
 }
 
+.active-menu_menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .active-menu_cabecalho {
   height: 100vh;
-  grid-template-rows: auto 90vh;
+  grid-template-rows: auto 92vh;
 }

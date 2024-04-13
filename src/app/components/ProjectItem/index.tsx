@@ -1,7 +1,8 @@
-import { FaArrowRight, FaPlus } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import styles from "./styles.module.scss";
-import { SiHtml5, SiJavascript } from "react-icons/si";
+import { SiGithub, SiHtml5, SiJavascript } from "react-icons/si";
 import TechItem from "../TechItem";
+import RedirectLink from "../RedirectLink";
 
 /* eslint-disable @next/next/no-img-element */
 interface ProjectItemProps {
@@ -31,32 +32,28 @@ export default function ProjectItem({
 
   return (
     <div
-      className={`${styles.project} mx-2 h-fit max-h-[64vh] min-h-96 max-w-[70vw] overflow-hidden rounded-3xl sm:w-[24.5rem]`}
+      className={`${styles.project} mx-2 h-fit max-h-[64vh] min-h-96 max-w-[80vw] overflow-hidden rounded-3xl sm:w-[24.5rem]`}
     >
       <img src={imageUrl} alt="" className="h-[60%] w-full rounded-t-3xl object-cover" />
       <div
-        className={`${styles["project-info"]} h-fit bg-gradient-to-b from-cinza-750 to-cinza-900 backdrop-blur`}
+        className={`${styles["project-info"]} flex h-fit w-full flex-col gap-3 bg-gradient-to-b from-cinza-750 to-cinza-900 backdrop-blur`}
       >
-        <div>
-          <h2 className=" title text-2xl font-medium">{projectTitle || "Título"}</h2>
-          <p className="description mb-3 mt-2 text-sm text-cinza-300">
-            {projectDescription}
-          </p>
-          <li className="mb-2 flex flex-wrap items-center gap-1">
-            {techList.map((tech) => (
-              <TechItem name={tech} key={tech} />
-            ))}
-          </li>
-        </div>
-        <div className="links flex justify-between">
-          <a href={links?.github} target="_blank" className="flex items-center gap-2">
+        <h2 className=" title text-2xl font-medium">{projectTitle || "Título"}</h2>
+        <p className="description text-sm text-cinza-300">{projectDescription}</p>
+        <li className="hidden flex-wrap items-center gap-1 sm:flex">
+          {techList.map((tech) => (
+            <TechItem name={tech} key={tech} />
+          ))}
+        </li>
+        <div className="links flex flex-col justify-between gap-2 sm:flex-row">
+          <RedirectLink link={links?.github}>
+            <SiGithub />
             Github
+          </RedirectLink>
+          <RedirectLink link={links?.project}>
+            Acesse
             <FaArrowRight />
-          </a>
-          <a href={links?.project} target="_blank" className="flex items-center gap-2">
-            Show more
-            <FaPlus />
-          </a>
+          </RedirectLink>
         </div>
       </div>
     </div>
