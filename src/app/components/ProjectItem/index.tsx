@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa";
 import styles from "./styles.module.scss";
 import { SiGithub, SiHtml5, SiJavascript } from "react-icons/si";
 import TechItem from "../TechItem";
-import RedirectLink from "../RedirectLink";
+import Button from "../Button";
 import { useEffect, useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
@@ -42,7 +42,7 @@ export default function ProjectItem({
 
   return (
     <div
-      className={`${styles.project} mx-2 h-fit max-h-[64vh] min-h-96 max-w-[80vw] overflow-hidden rounded-3xl sm:w-[24.5rem] sm:max-w-[50vw]`}
+      className={`${styles.project} mx-2 h-fit max-h-[64vh] min-h-96 max-w-[80vw] overflow-hidden rounded-xl sm:w-[24.5rem] sm:max-w-[50vw]`}
     >
       <img src={imageUrl} alt="" className="h-[60%] w-full rounded-t-3xl object-cover" />
       <div
@@ -58,14 +58,14 @@ export default function ProjectItem({
           ))}
         </li>
         <div className="links flex flex-col justify-between gap-2 sm:flex-row">
-          <RedirectLink link={links?.github}>
+          <Button link={links?.github}>
             <SiGithub />
             Github
-          </RedirectLink>
-          <RedirectLink link={links?.project}>
+          </Button>
+          <Button link={links?.project}>
             Acesse
             <FaArrowRight />
-          </RedirectLink>
+          </Button>
         </div>
       </div>
     </div>

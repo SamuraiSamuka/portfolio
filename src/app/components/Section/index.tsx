@@ -5,21 +5,34 @@ interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   id: string;
   title?: string;
   children?: ReactElement | ReactElement[];
-  first?: boolean;
+  type?: "normal" | "first" | "last";
 }
 
-export default function Section({ first = false, ...props }: SectionProps) {
-  return first ? (
+export default function Section({ type = "normal", ...props }: SectionProps) {
+  const firstSectionStyle = "h-[90svh] snap-center overflow-hidden px-2 sm:px-6 scroll-mt-[10vh]";
+  const normalSectionStyle = "h-[90svh] snap-center overflow-hidden px-2 sm:px-6";
+  const lastSectionStyle = "h-fit snap-center overflow-hidden px-2 sm:px-6";
+
+  const firstSubSectionStyle =
+    "h-[80svh] max-h-[80svh] mt-[8svh] flex justify-center md:items-center sm:mt-[10svh]";
+  const normalSubSectionStyle = "h-[80svh] max-h-[80svh]";
+  const lastSubSectionStyle = "h-fit flex justify-center items-center";
+
+  return (
     <section
       {...props}
-      className={`h-[90svh] snap-center scroll-mt-[10vh] overflow-hidden px-2 sm:px-6 ${props.className} `}
+      className={`${props.className} ${type === "first" ? firstSectionStyle : type === "last" ? lastSectionStyle : normalSectionStyle} `}
     >
-      {props.children}
-    </section>
-  ) : (
-    <section className="h-[90svh] snap-center overflow-hidden px-2 sm:px-6" {...props}>
-      <NextSection href={`#${props.id}`} title={props.title || ""} />
-      <div className=" h-[90vh] max-h-[90vh]">{props.children}</div>
+      {type === "normal" || type === "last" ? (
+        <NextSection href={`#${props.id}`} title={props.title || ""} />
+      ) : (
+        ""
+      )}
+      <div
+        className={` ${type === "normal" ? normalSubSectionStyle : type === "first" ? firstSubSectionStyle : lastSubSectionStyle}`}
+      >
+        {props.children}
+      </div>
     </section>
   );
 }

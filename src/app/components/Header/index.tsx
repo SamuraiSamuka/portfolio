@@ -3,7 +3,7 @@
 import { FiAlignCenter } from "react-icons/fi";
 import "./styles.css";
 import { useEffect, useState } from "react";
-import Button from "../Button";
+import SectionLink from "../SectionLink";
 
 export default function Header() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -37,7 +37,8 @@ export default function Header() {
     <>
       {domLoaded && (
         <header
-          className={`cabecalho fixed z-[5] mx-auto ml-[-1rem] box-border grid w-full grid-cols-3 items-center justify-between bg-cinza-900 px-4 py-4 sm:ml-[-2rem] sm:flex sm:px-8 md:max-w-screen-md lg:max-w-screen-lg`}
+          className={`cabecalho fixed z-[5] mx-auto ml-[-1rem] box-border grid w-full grid-cols-3 items-center justify-between bg-cinza-900 px-4 py-4 
+                      sm:ml-[-2rem] sm:flex sm:px-8 md:max-w-screen-md lg:max-w-screen-lg`}
           id="cabecalho"
         >
           <div className=" text-lg leading-tight">
@@ -46,9 +47,10 @@ export default function Header() {
           </div>
           <nav
             id="menu"
-            className={`menu col-start-2 row-start-2 mt-28 h-fit items-center gap-6 self-start sm:mt-0 sm:flex sm:flex-row sm:gap-2 sm:self-center`}
+            className={`menu col-start-2 row-start-2 mt-28 h-fit items-center gap-6 self-start 
+                        sm:mt-0 sm:flex sm:flex-row sm:gap-1 sm:self-center md:gap-2`}
           >
-            <Button
+            <SectionLink
               link="#inicio"
               active={activeSection == "inicio"}
               onClick={() => {
@@ -56,35 +58,35 @@ export default function Header() {
               }}
             >
               Início
-            </Button>
-            <Button
+            </SectionLink>
+            <SectionLink
               link="#sobremim"
               active={activeSection == "sobremim"}
               onClick={() => handleSectionChange("sobremim")}
             >
               Sobre mim
-            </Button>
-            <Button
+            </SectionLink>
+            <SectionLink
               link="#projetos"
               active={activeSection === "projetos"}
               onClick={() => handleSectionChange("projetos")}
             >
               Projetos
-            </Button>
-            <Button
+            </SectionLink>
+            <SectionLink
               link="#habilidades"
               active={activeSection === "habilidades"}
               onClick={() => handleSectionChange("habilidades")}
             >
               Habilidades
-            </Button>
-            <Button
-              link="#contato"
-              active={activeSection === "contato"}
-              onClick={() => handleSectionChange("contato")}
+            </SectionLink>
+            <SectionLink
+              link="#contatos"
+              active={activeSection === "contatos"}
+              onClick={() => handleSectionChange("contatos")}
             >
               Contato
-            </Button>
+            </SectionLink>
           </nav>
           <FiAlignCenter
             className="col-start-3 justify-self-end text-2xl hover:cursor-pointer sm:hidden"

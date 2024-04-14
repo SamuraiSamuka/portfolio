@@ -1,29 +1,21 @@
-"use client";
+import { ReactNode } from "react";
 
-import Link from "next/link";
-
-interface ButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
-  children: string;
-  link: string;
-  active: boolean;
+interface ButtonProps {
+  link?: string;
+  children?: ReactNode | string;
+  className?: string;
 }
 
-export default function Button({ children, link, active, ...props }: ButtonProps) {
-  let buttonStyle = "";
-  active
-    ? (buttonStyle =
-        "hover:bg-neutral-700 rounded-full border border-white duration-700 px-3 py-1 transition")
-    : (buttonStyle =
-        "hover:bg-neutral-700 rounded-full border-transparent duration-700 px-3 py-1 transition");
-
+export default function Button({ link, children, className }: ButtonProps) {
   return (
-    <Link
+    <a
       href={link}
-      className={buttonStyle}
-      onClick={() => console.log(window.location.hash)}
-      {...props}
+      target="_blank"
+      className={`hover:bg-azul-600 flex w-full items-center justify-center gap-2 rounded-lg bg-neutral-500 px-2 
+                  py-2 hover:cursor-pointer hover:font-semibold hover:text-neutral-800
+                  sm:py-1 ${className}`}
     >
       {children}
-    </Link>
+    </a>
   );
 }

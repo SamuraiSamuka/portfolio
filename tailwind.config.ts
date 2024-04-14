@@ -10,8 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
         "cinza-100": "#f5f3f0",
@@ -23,6 +22,8 @@ const config: Config = {
         "cinza-750": "#5a5a5ad5",
         "cinza-800": "#232121",
         "cinza-900": "#171717",
+        "azul-500": "#65baff",
+        "azul-600": "#42a6f8",
 
         transparente: "#00000000",
       },

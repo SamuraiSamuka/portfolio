@@ -67,7 +67,7 @@ export default function ProjectsSection() {
           id="projetos"
           className="h-[90svh] snap-center overflow-hidden sm:px-6"
         >
-          <h2 className="mt-[5svh] h-[8svh] text-left text-2xl">Meus Projetos</h2>
+          <h2 className="mt-[5svh] h-[8svh] text-left text-2xl sm:mt-[10vh]">Meus Projetos</h2>
           <div className="grid-cols-[4%_92%_4%] sm:grid">
             <button
               onClick={previous}

@@ -7,7 +7,10 @@ interface NextSectionProps {
 
 export default function NextSection({ href, title }: NextSectionProps) {
   return (
-    <a href={href} className="flex h-[10svh] w-full flex-col items-center justify-center gap-4">
+    <a
+      href={href}
+      className="flex h-[10svh] w-full flex-col items-center justify-center gap-4 rounded-xl hover:bg-neutral-800"
+    >
       <h3 className=" text-2xl">{title}</h3>
       <IoIosArrowDown className=" animate-bounce text-3xl transition" />
     </a>
