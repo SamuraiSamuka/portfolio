@@ -13,13 +13,13 @@ import {
 
 export default function ProjectsSection() {
   const [domLoaded, setDomLoaded] = useState(false);
-  let sliderRef = useRef(null);
+  let sliderRef = useRef<Slider | null>(null);
 
   const next = () => {
-    sliderRef.slickNext();
+    sliderRef.current?.slickNext();
   };
   const previous = () => {
-    sliderRef.slickPrev();
+    sliderRef.current?.slickPrev();
   };
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function ProjectsSection() {
             <Slider
               {...settings}
               ref={(slider) => {
-                sliderRef = slider;
+                sliderRef.current = slider;
               }}
             >
               <ProjectItem
