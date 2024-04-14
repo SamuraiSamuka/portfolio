@@ -16,7 +16,9 @@ export default function Home() {
       <ContactsSection />
       <footer className="mb-4 mt-2 flex w-full justify-between text-xs">
         <p>© Samuel Carvalho 2024</p>
-        <p>samuel.carvalho.dev@gmail.com</p>
+        <p>
+          <a href="mailto:samuel.carvalho.dev@gmail.com">samuel.carvalho.dev@gmail.com</a>
+        </p>
       </footer>
     </main>
   );

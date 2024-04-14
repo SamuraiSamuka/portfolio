@@ -71,7 +71,7 @@ export default function ProjectsSection() {
           <div className="grid-cols-[4%_92%_4%] sm:grid">
             <button
               onClick={previous}
-              className="hidden items-center justify-center bg-neutral-800 sm:flex"
+              className="hidden items-center justify-center rounded-l-xl hover:bg-neutral-800 sm:flex"
             >
               <MdOutlineKeyboardDoubleArrowLeft className=" text-4xl" />
             </button>
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
             </Slider>
             <button
               onClick={next}
-              className="hidden items-center justify-center bg-neutral-800 sm:flex"
+              className="hidden items-center justify-center rounded-r-xl hover:bg-neutral-800 sm:flex"
             >
               <MdOutlineKeyboardDoubleArrowRight className=" text-4xl" />
             </button>
