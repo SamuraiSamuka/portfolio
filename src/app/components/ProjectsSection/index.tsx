@@ -84,34 +84,21 @@ export default function ProjectsSection() {
               <ProjectItem
                 theme="light"
                 title="Samuka Geek"
-                stack="html, css, react.js, typescript, github, tailwindCSS, react-router-dom"
-                description="Proejeto de um e-commerce especializado em produtos geek, como action-figures, video-games, camisetas, etc. Site com sistema de login, carrinho e campo de busca"
+                stack="reactJs, typescript, tailwindCSS, react-router-dom"
+                description="Projeto de um e-commerce especializado em produtos geek, como action-figures, video-games, camisetas, etc. Site com sistema de login, carrinho e campo de busca"
                 links={{ project: "https://samuka-geek.vercel.app/", github: "" }}
-                imageUrl="samukaGeek.png"
+                imageUrl="samuka_geek.png"
               />
               <ProjectItem
                 theme="light"
-                title="Samuka Geek"
-                stack="html, css, react.js, typescript, github, tailwindCSS, react-router-dom"
-                description="Proejeto de um e-commerce especializado em produtos geek, como action-figures, video-games, camisetas, etc. Site com sistema de login, carrinho e campo de busca"
-                links={{ project: "https://samuka-geek.vercel.app/", github: "" }}
-                imageUrl="project-example-1.jpeg"
-              />
-              <ProjectItem
-                theme="light"
-                title="Samuka Geek"
-                stack="html, css, react.js, typescript, github, tailwindCSS, react-router-dom"
-                description="Proejeto de um e-commerce especializado em produtos geek, como action-figures, video-games, camisetas, etc. Site com sistema de login, carrinho e campo de busca"
-                links={{ project: "https://samuka-geek.vercel.app/", github: "" }}
-                imageUrl="project-example-2.jpeg"
-              />
-              <ProjectItem
-                theme="light"
-                title="Samuka Geek"
-                stack="html, css, react.js, typescript, github, tailwindCSS, react-router-dom"
-                description="Proejeto de um e-commerce especializado em produtos geek, como action-figures, video-games, camisetas, etc. Site com sistema de login, carrinho e campo de busca"
-                links={{ project: "https://samuka-geek.vercel.app/", github: "" }}
-                imageUrl="project-example-3.jpg"
+                title="Agenda Saúde"
+                stack="reactJs, nextJs, typescript, tailwindCSS"
+                description="Projeto voluntário de desenvolvimento de software voltado à área da saúde. Possui foco em auxiliar pacientes, clínicas e médicos nas marcações e gerenciamento de consultas."
+                links={{
+                  project: "https://agenda-saude.vercel.app/",
+                  github: "https://github.com/Care-4-you/AgendaSaude.web",
+                }}
+                imageUrl="agenda_saude.png"
               />
             </Slider>
             <button

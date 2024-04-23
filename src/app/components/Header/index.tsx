@@ -4,6 +4,7 @@ import { FiAlignCenter } from "react-icons/fi";
 import "./styles.css";
 import { useEffect, useState } from "react";
 import SectionLink from "../SectionLink";
+import { IoMdClose } from "react-icons/io";
 
 export default function Header() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -12,10 +13,14 @@ export default function Header() {
   function toggleActiveMenu() {
     const nav = document.getElementById("menu");
     const header = document.getElementById("cabecalho");
+    const closeIcon = document.getElementById("close-menu_icon");
+    const menuIcon = document.getElementById("menu_icon");
 
     if (window.innerWidth < 640) {
       nav?.classList.toggle("active-menu_menu");
       header?.classList.toggle("active-menu_cabecalho");
+      menuIcon?.classList.toggle("hidden");
+      closeIcon?.classList.toggle("hidden");
     }
   }
 
@@ -91,8 +96,16 @@ export default function Header() {
           <FiAlignCenter
             className="col-start-3 justify-self-end text-2xl hover:cursor-pointer sm:hidden"
             onClick={(e) => {
-              handleSectionChange();
+              toggleActiveMenu();
             }}
+            id="menu_icon"
+          />
+          <IoMdClose
+            className="col-start-3 hidden justify-self-end text-2xl hover:cursor-pointer sm:hidden"
+            onClick={(e) => {
+              toggleActiveMenu();
+            }}
+            id="close-menu_icon"
           />
         </header>
       )}

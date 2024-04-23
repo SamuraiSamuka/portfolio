@@ -46,7 +46,11 @@ export default function HabilitiesSection() {
                 REACT-ROUTER-DOM, GIT, STRIPE, CMS, clean-code, design-patterns
               </p>
             </div>
-            <Button className="max-w-[70%] self-center lg:py-2">
+            <Button
+              className="max-w-[70%] self-center lg:py-2"
+              download="samuel_carvalho-curriculo.pdf"
+              link="curriculo.pdf"
+            >
               Baixe meu CV
               <BiDownload className="text-xl" />
             </Button>

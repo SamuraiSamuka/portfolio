@@ -13,9 +13,7 @@ export default function ContactsSection() {
             LinkedIn
           </ContactLink>
           <ContactLink link="https://github.com/SamuraiSamuka">GitHub</ContactLink>
-          <ContactLink link="https://web.whatsapp.com/send?phone=5575998575166">
-            WhatsApp
-          </ContactLink>
+          <ContactLink link="whatsapp://send?phone=5575998575166">WhatsApp</ContactLink>
         </div>
         <SectionLink link="#inicio" active className="w-fit py-3">
           <FaArrowUp />
